@@ -1,14 +1,21 @@
+import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Social Media Downloader",
-  description: "Download videos instantly",
+  description: "Download videos instantly with a premium UI",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">{children}</body>
+      <body className="bg-black text-white antialiased">
+        {children}
+      </body>
     </html>
   );
 }
